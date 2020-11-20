@@ -8,7 +8,7 @@ const app = express();
 const db = require('./config/keys').mongoURI
 
 //connect to Mongo
-mongoose.connect(db, {useNewUrlParser: true})
+mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => console.log("Connected to mongoDB...."))
 .catch(err => console.log(err));
 
